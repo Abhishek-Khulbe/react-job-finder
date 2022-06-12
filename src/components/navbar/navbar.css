@@ -1,0 +1,135 @@
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+}
+
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  position: sticky;
+  top: 0;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-header h2{
+  color: #EB5353;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color:#EB5353;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+  transform: rotate(90deg);
+}
+
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.links a:hover {
+  background: #EB5353;
+  color: white;
+  padding-left: 1.5rem;
+  transform: scale(1.2);
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-container {
+  height: 10rem;
+}
+
+.user-profile {
+  display: none;
+}
+
+.profile-picture {
+  display: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 700px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .links-container {
+    height: auto !important;
+  }
+
+  .links {
+    display: flex;
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+    color: #EB5353;
+  }
+
+  .profile-picture {
+    display: block;
+    height: 4rem;
+    border-radius: 40%;
+    object-fit: cover;
+    border: 3px solid #EB5353;
+  }
+
+  .user-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-data {
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (max-width:290px){
+  nav{
+      width: 122%;
+  }
+}
